@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap')
+	;
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.hea {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+}
+table {
+/* 	position: absolute; */
+/* 	top: 60%; */
+/* 	left: 50%; */
+/* 	border-radius: 5px; */
+/* 	transform: translate(-50%, -50%); */
+/* 	border-spacing : 20px; */
+/* 	width: 25%; */
+position: absolute;
+	top: 70%;
+	left: 50%;
+	border-radius: 5px;
+	transform: translate(-50%, -50%);
+	border-spacing : 20px;
+	width:30%;
+	height:60%;
+}
+
+.td_label {
+	font-family: 'Noto Sans KR', sans-serif;
+	padding: 5px 10px;
+	text-align: center;
+	background-color: rgb(235,235,235);
+	color: #000;
+	font-weight: bold;
+	width: 25%;
+}
+
+.td_input>input[type=text], .td_input>input[type=password], 
+.td_input>input[type=email],.td_input>input[type=tel]	
+ {
+	width: 100%;
+	padding: 5px 5px;
+	font-size: 15px;
+	outline: 1px solid black;
+}
+
+.td_input>input[name=blood] {
+	margin-right: 15px;
+}
+.td_input:last-of-type {
+	text-align: center;
+}
+
+.RB1 {
+	position: absolute;
+	top: 5%;
+	left: 45%;
+	width: 300px;
+	height: 200px;
+}
+#new{
+	position: absolute;
+	left:70%;
+}
+#new1{
+	position:absolute;
+	left:80%;
+}

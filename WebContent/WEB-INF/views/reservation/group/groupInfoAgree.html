@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>개인정보 동의</title>
+ <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+   $(document).ready(
+         
+      // 시멘틱 구조 불러오기
+      function() {
+
+         // header.html 삽입 script
+         $("#headers").load("/common/htmlTag/header.html");
+
+         // nav.html 삽입 script
+         $("#navs").load("/common/htmlTag/nav.html");
+
+         // footer.html 삽입 script
+         $("#footers").load("/common/htmlTag/footer.html");
+
+      });
+</script>
+
+<script>
+	$("#next_btn").on("click", function(){
+		var radios = $(":radio[value='Y']");
+		for(var i = 0; i < radios.length; i++){
+			var $this = $(radios[i]);
+			if(!$this.is(":checked")){
+				alert('동의하지 않으면 문진을 시작할 수 없습니다.');
+				$this.focus();
+				return;
+			}
+		}
+	});
+</script>
+
+<style type="text/css">
+
+	/* 시멘틱 구조영역 스타일 */
+	#wrapping1 {
+		width: auto;
+		height: 1400px;
+		margin: 0 auto;
+		/*background-image: linear-gradient(to top, #e3eeff 0%, #e3eeff 20%, #f3e7e9 100%);*/
+	}
+	
+	#wrapping2 {
+		width: 1550px;
+		height: 1400px;
+		margin: 0 auto;
+		background-color: white;
+	}
+	
+	header {
+		position: static;
+		width: 1500px;
+		margin: 0 auto;
+	}
+	
+	nav {
+		position: relative;
+		width: 1500px;
+		z-index: 3;
+		margin: 0 auto;
+	}
+	
+	section {
+		/* position: relative; */
+		width: 1500px;
+		height: 1000px;
+		/* border: 1px solid black; */
+		padding-top: 20px;
+		margin: 0 auto;
+		z-index: 1;
+		display: block;
+	}
+	
+	#section_left {
+		position: absolute;
+		display: block;
+		width: 300px;
+		height: 1000px;
+		border-right: 1px solid black;
+		box-sizing: border-box;
+		float: left;
+	}
+	
+	#section_right {
+		position: absolute;
+		display: block;
+		width: 1200px;
+		height: 1000px;
+		/*border : 1px solid black;*/
+		margin-left: 300px;
+	}
+	
+	/*----------------------------------------------*/
+	/*section-right꾸미기*/
+	section>#section_right>#right_whole {
+		width: 1140px;
+		height: 950px;
+		margin-left: 30px;
+		margin-top: 10px;
+		float: left;
+	}
+	section>#section_right>#right_whole>#right_head{
+		
+	}
+	
+	section>#section_right>#right_whole>#right_middle {
+		width: 1140px;
+		height: 950px;
+	}
+	
+	.middle_text {
+		width: 1140px;
+		height: 285px;
+		float: left;
+	}
+	
+	.middle_agree {
+		width: 370px;
+		height: 57px;
+		padding-top: 6px;
+		font-size: 15pt;
+		float: right;
+	}
+	
+	#submit_btn {
+		width : 80px;
+		height : 40px;
+		float : right;
+		padding : 5px;
+		border : 2px solid #ccc;
+		-webkit-border-radius : 5px;
+		border-radius : 5px;
+	}
+</style>
+</head>
+<body>
+	<div id="wrapping1">
+		<div id="wrapping2">
+			<header id="headers"></header>
+			<br>
+			<nav id="navs"></nav>
+			<br>
+
+			<section>
+				<div id="section_left"></div>
+				<div id="section_right">
+					<div id="right_whole">
+						<div id="right_head">
+							<h1 style="font-weight: 900;">개인정보동의</h1>
+						</div>
+						<div id="right_middle">
+								<div class="middle_text">
+								<div style="border: 1px solid black; width: 100%; height: 80%;"></div>
+								<div class="middle_agree">
+									<label> <input type="radio" name="r1" value="1" class="agree">
+										&nbsp;동의합니다.&nbsp;&nbsp;&nbsp;
+									</label> 
+									<label> <input type="radio" name="r1" value="0" class="agree">
+										&nbsp;동의하지않습니다.
+									</label>
+								</div>
+							</div>
+							<div class="middle_text">
+								<div style="border: 1px solid black; width: 100%; height: 80%;"></div>
+								<div class="middle_agree">
+									<label> <input type="radio" name="r2" value="1" class="agree">
+										&nbsp;동의합니다.&nbsp;&nbsp;&nbsp;
+									</label>
+									<label> <input type="radio" name="r2" value="0" class="agree">
+										&nbsp;동의하지않습니다.
+									</label>
+								</div>
+							</div>
+							<div class="middle_text">
+								<div style="border: 1px solid black; width: 100%; height: 80%;"></div>
+								<div class="middle_agree">
+									<label> <input type="radio" name="r3" value="1" class="agree">
+										&nbsp;동의합니다.&nbsp;&nbsp;&nbsp;
+									</label>
+									<label> <input type="radio" name="r3" value="0" class="agree">
+										&nbsp;동의하지않습니다.
+									</label>
+								</div>
+							</div>
+							
+							<form onsubmit="return f()" name="infoagree" action="/group/reservation/info">
+								<div id="middle_btn">
+									<input type="submit" value="next >" id="submit_btn">
+									 
+								</div>
+							</form>
+							
+							<!-- <input type="button" onclick="return f()" value="NEXT >"> -->
+							
+						</div>
+
+					</div>
+				</div>
+
+			</section>
+			<br> <br>
+
+			<footer id="footers"></footer>
+		</div>
+	</div>
+	
+	<script>
+	//라디오 버튼 검사 
+		function f(){
+		var radio_name = new Array;
+		$(".agree").each(function(index){
+		
+		    radio_name.push($(this).attr('name'));
+		});
+		
+		radio_name = unique(radio_name)
+		
+		for(var i=0;i<radio_name.length;i++){
+		
+		 
+		 if( $('input[name='+radio_name[i]+']:checked').val() != '1'){
+		        alert('동의하지 않으면 문진을 할 수 없습니다..');
+		        $('input[name='+radio_name[i]+']:eq(0)').focus();
+		        
+		        return false;
+		        
+		 }
+		}
+		
+		return true;
+		
+		}
+		
+		
+		function unique(list) {
+		var result = [];
+		$.each(list, function(i, e) {
+		if ($.inArray(e, result) == -1) result.push(e);
+		});
+		return result;
+		}
+	
+	
+	
+	/*
+        $(document).ready(function(){
+            /* $("form[name=infoagree]").submit(function(){
+                return f();
+            });
+        });
+        
+        function f(){
+            var radio_name = new Array;
+            $(".agree").each(function(index){
+                radio_name.push($(this).attr('name'));
+            });
+            radio_name = unique(radio_name)
+            for(var i=0; i<radio_name.length; i++){
+                if($('input[name='+radio_name[i]+']:checked').val() != '1'){
+                   alert('동의하지 않으면 문진을 할 수 없습니다..');
+                    $('input[name='+radio_name[i]+']:eq(0)').focus();
+                    return false;
+                
+                   }
+            }
+            location.href="/basic/info";
+        }
+        
+        function unique(list){
+            var result = [];
+            $.each(list, function(i, e){
+                if($.inArray(e, result) == -1)result.push(e);
+            });
+            return result;
+        }
+        
+        */
+    </script>
+</body>
+</html>

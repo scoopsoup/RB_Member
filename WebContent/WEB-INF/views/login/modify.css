@@ -1,0 +1,176 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap')
+	;
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.hea {
+
+}
+table {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	border-radius: 5px;
+	transform: translate(-50%, -50%);
+	border-spacing : 20px;
+	width: 25%;
+	height: 50%;
+}
+
+.td_label {
+	font-family: 'Noto Sans KR', sans-serif;
+	padding: 5px 10px;
+	text-align: center;
+	background-color: #dedede;
+	color: #000;
+	font-weight: bold;
+	width: 25%;
+	border: 1px solid black;
+}
+
+.td_input>input[type=text], .td_input>input[type=password], 
+.td_input>input[type=email],.td_input>input[type=tel] {
+	width: 96%;
+	padding: 5px 5px;
+	font-size: 15px;
+	outline: none;
+	border: 0;
+}
+
+.td_input>input[name=blood] {
+	margin-right: 15px;
+}
+
+.td_input:last-of-type {
+	text-align: center;
+	border:1px solid black;
+}
+
+	/* 시멘틱 구조영역 스타일 */
+	
+	header {
+		position: static;
+		width: 1500px;
+		margin: 0 auto;
+	}
+	
+	nav {
+		position: relative;
+		width: 1500px;
+		z-index: 3;
+		margin: 0 auto;
+	}
+	
+	section {
+		/* position: relative; */
+		width: 1500px;
+		height: 1000px;
+		/* border: 1px solid black; */
+		padding-top: 20px;
+		margin: 0 auto;
+		z-index: 1;
+		display: block;
+	}
+	
+	#section_left {
+	   		 position:absolute;
+	         display : block;
+	         width : 300px;
+	         height : 1000px;
+	         border : 1px solid black;
+	         box-sizing: border-box;
+	         float:left;
+		
+	}
+	
+	#section_right {
+	   		 position:absolute;
+	         display : block;
+	         width : 1200px;
+	         height : 1000px;
+	         border : 1px solid black;
+	         margin-left:300px;
+		
+	}
+	.navi {		
+		width: 1500px;
+		height: 28px;
+		margin: 0;
+		padding: 0;
+		background-color: silver;
+	}
+	
+	.navi li a {
+		text-decoration: none;
+		color: black;
+		height: 28px;
+		font-weight: bold;
+		display: block;
+		text-align: center;
+		padding: 10px;
+	}
+	
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.navi > li{
+		float: left;
+		width:20%;
+	}
+	
+	.navi>li>a {
+		padding: 10px;
+	}
+	
+	li a {
+		background-color: silver;
+		text-decoration: none;
+		font-weight: bold;
+		color: black;
+		display: block;
+		text-align: center;
+	}
+	
+	li a:hover {
+		background-color: gray;
+		color: white;
+	}
+	
+	.navi li ul { /* << li 하위의 ul = 서브메뉴 */
+		display: none;
+	}
+	
+	.navi li:hover ul {
+		display: block;
+	}
+	
+	.navi li ul {
+		opacity: 0;
+	}
+	
+	.navi li:hover ul {
+		opacity: 1;
+		transition: all 1s;
+	}
+	
+	.navi li a {
+		transition: all 0.5s;
+	}
+    .footerDiv{
+        height: 150px;
+        width: 1500px;
+        text-align: center;
+        margin: 0 auto;
+        background-color: lightgray;
+		color: black;
+    } 
+

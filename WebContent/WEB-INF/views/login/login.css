@@ -1,0 +1,52 @@
+@charset "UTF-8";
+.hea3 {
+	position: absolute;
+	top:35%;
+	left: 41%;
+	font-size : 35px;
+	background-color:lightgray;
+	display:inline-block;
+	width: 400px;	
+	text-align:center;
+}
+.tab{
+	position:absolute;
+	top:45%;
+	left:40%;
+}
+.id{
+	height:70px;
+	width: 350px;
+	font-size :40px;
+}
+.password{
+	height:70px;
+	width: 350px;
+	font-size :40px;
+}
+	
+
+.fa-user{
+	font-size : 50px;	
+}
+.fa-key{
+	font-size : 50px;
+}
+.log{
+	height:50px;
+}
+.select{
+	text-align: right;
+    font-size: 20px;
+	
+}
+.RB1 {
+	position: absolute;
+	top: 20%;
+	left: 45%;
+	width: 200px;
+	height: 150px;
+}
+.log > input {
+	width:50%
+}
